@@ -13,17 +13,20 @@ void Student::SetName(char NumeNou[])
 
 void Student::SetMathematicsGrade(float grade)
 {
-    MathematicsGrade = grade;
+    if(grade >= 1 && grade <= 10)
+        MathematicsGrade = grade;
 }
 
 void Student::SetEnglishGrade(float grade)
 {
-    EnglishGrade = grade;
+    if(grade >= 1 && grade <= 10)
+        EnglishGrade = grade;
 }
 
 void Student::SetHistoryGrade(float grade)
 {
-    HistoryGrade = grade;
+    if(grade >= 1 && grade <= 10)
+        HistoryGrade = grade;
 }
 
 float Student::GetMathematicsGrade()
