@@ -20,5 +20,8 @@ int main()
     cout<<"\n---------------------\n";
     a.SetPoint(3,7,'$');
     a.Print();
+    a.Clear();
     cout<<"\n---------------------\n";
+    a.DrawLine(1, 1, 6, 9,'$');
+    a.Print();
 }
