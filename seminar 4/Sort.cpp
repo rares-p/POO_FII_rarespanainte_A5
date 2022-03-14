@@ -15,10 +15,7 @@ Sort::Sort(int nr, int minn, int maxn)
     time_t t;
 	srand((unsigned)time(&t));
     for(int i = 0; i < nr; i ++)
-    {
-        int x = minn + rand()%(maxn - minn + 1);
-        this->a[i] = x;
-    }
+        this->a[i] = minn + rand()%(maxn - minn + 1);
 }
 
 Sort::Sort(int* b, int n)
