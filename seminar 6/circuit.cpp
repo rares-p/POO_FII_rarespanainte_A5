@@ -19,5 +19,5 @@ void Circuit::SetLength(int newLength)
 
 int Circuit::getAverageSpeedIndex(int i)
 {
-    return cars[i]->getAverageSpeed(Rain);
+    return cars[i]->getAverageSpeed(this->weather);
 }
