@@ -4,17 +4,19 @@
 #include "dacia.h"
 #include "volvo.h"
 #include "bmw.h"
+#include "opel.h"
 using namespace std;
 
 int main()
 {
     Circuit c;
-    c.SetLength(100);
+    c.SetLength(500);
     c.SetWeather(Weather::Rain);
     c.AddCar(new Dacia());
     c.AddCar(new Volvo());
+    c.AddCar(new Opel());
     c.AddCar(new BMW());
-    cout<<c.getAverageSpeedIndex(0)<< ' '<<c.getAverageSpeedIndex(1)<< ' '<<c.getAverageSpeedIndex(2)<<'\n';
-    c.SetWeather(Snow);
-    cout<<c.getAverageSpeedIndex(0)<< ' '<<c.getAverageSpeedIndex(1)<< ' '<<c.getAverageSpeedIndex(2);
+    c.Race();
+    c.ShowFinalRanks();
+    c.ShowWhoDidNotFinish();
 }

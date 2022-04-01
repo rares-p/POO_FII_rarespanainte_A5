@@ -14,3 +14,8 @@ int Volvo::getAverageSpeed(Weather weather)
 {
     return this->averageSpeed[weather];
 }
+
+const char* Volvo::getBrand()
+{
+    return "Volvo";
+}

@@ -15,3 +15,8 @@ int Dacia::getAverageSpeed(Weather weather)
 {
     return this->averageSpeed[weather];
 }
+
+const char* Dacia::getBrand()
+{
+    return "Dacia";
+}

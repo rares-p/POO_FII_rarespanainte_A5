@@ -9,5 +9,6 @@ public:
     int getFuelCapacity();
     int getFuelConsumption();
     int getAverageSpeed(Weather weather);
+    const char* getBrand();
 };
 

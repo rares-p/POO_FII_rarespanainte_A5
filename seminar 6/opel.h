@@ -1,13 +1,14 @@
 #pragma once
 #include "car.h"
 
-class BMW : public Car
+class Opel : public Car
 {
-    int fuelCapacity = 30, fuelConsumption = 7;
-    int averageSpeed[3] = {120, 160, 110};
+    int fuelCapacity = 30, fuelConsumption = 8;
+    int averageSpeed[3] = {70, 120, 65};
 public:
     int getFuelCapacity();
     int getFuelConsumption();
     int getAverageSpeed(Weather weather);
     const char* getBrand();
 };
+

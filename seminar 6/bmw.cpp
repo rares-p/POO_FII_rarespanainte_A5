@@ -16,3 +16,7 @@ int BMW::getAverageSpeed(Weather weather)
     return this->averageSpeed[weather];
 }
 
+const char* BMW::getBrand()
+{
+    return "BMW";
+}
