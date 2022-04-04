@@ -7,5 +7,6 @@ int main()
     vector<int> calin;
     calin.push(2);
     calin.push(6);
+    calin.pop();
     cout << calin.count();
 }

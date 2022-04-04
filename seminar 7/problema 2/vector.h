@@ -13,7 +13,10 @@ public:
     }
     void pop()
     {
-        delete array[--n];
+        type *newarray = new type[--n];
+        for(int i = 0; i < n; newarray[i] = array[i], i ++);
+        delete[] array;
+        array = newarray;
     }
     int count()
     {
