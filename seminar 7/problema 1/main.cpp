@@ -45,7 +45,7 @@ float operator"" _Fahrenheit(const char * temp, size_t sz)
 
 int main()
 {
-    float a = -30_Kelvin;
+    float a = 300_Kelvin;
     cout << a << '\n';
     float b = 120_Fahrenheit;
     cout << b << '\n';
