@@ -4,7 +4,12 @@ template<typename type>
 class vector{
     type* array;
     int n = 0;
+    unsigned int capacity = 0;
 public:
+    vector()
+    {
+        array = nullptr;
+    }
     void push(type x)
     {
         type *newarray = new type[++n];
