@@ -11,7 +11,11 @@ public:
         delete[] array;
         array = newarray;
     }
-    void pop()
+    type pop()
+    {
+        return array[n - 1];
+    }
+    void delete()
     {
         type *newarray = new type[--n];
         for(int i = 0; i < n; newarray[i] = array[i], i ++);
