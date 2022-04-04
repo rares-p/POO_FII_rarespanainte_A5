@@ -26,6 +26,8 @@ public:
     }
     void insert(type x, unsigned pos)
     {
+        if(pos < 0 || pos > n)
+            return;
         type *newarray = new type[++n];
         for(int i = 0; i < pos; newarray[i] = array[i], i ++);
         newarray[pos] = x;
