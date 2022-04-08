@@ -27,7 +27,7 @@ public:
     {
         return array[n - 1];
     }
-    void remove()
+    void remove(int index)
     {
         if(n == 0)
             return;
@@ -35,7 +35,10 @@ public:
         if(n <= capacity / 2)
             capacity /= 2;
         type *newarray = new type[capacity];
-        for(int i = 0; i < n; newarray[i] = array[i], i ++);
+        for(int i = 0; i < index - 1; i ++)
+            newarray[i] = array[i];
+        for(int i = index - 1; i < n; i ++)
+            newarray[i] = array[i + 1];
         delete[] array;
         array = newarray;
     }

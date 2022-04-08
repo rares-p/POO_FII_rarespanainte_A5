@@ -18,5 +18,7 @@ int main()
     cout << "Vectorul sortat (default crescator): ";
     unvector.sort();
     unvector.print();
+    unvector.remove(5);
+    unvector.print();
     delete &unvector;
 }
