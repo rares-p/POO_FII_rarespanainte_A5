@@ -29,6 +29,8 @@ public:
     }
     void remove()
     {
+        if(n == 0)
+            return;
         n--;
         if(n <= capacity / 2)
             capacity /= 2;
