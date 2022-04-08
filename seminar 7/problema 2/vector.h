@@ -1,5 +1,3 @@
-#include <iostream>
-using namespace std;
 template<typename type>
 class vector{
     type* array;
@@ -14,7 +12,7 @@ public:
     {
         n++;
         if(n > capacity)
-            capacity *= 2 + (unsigned int)(capacity == 0);
+            capacity = capacity * 2 + (capacity == 0);
         type *newarray = new type[capacity];
         for(int i = 0; i < n - 1; newarray[i] = array[i], i ++);
         newarray[n - 1] = x;
@@ -61,7 +59,7 @@ public:
     {
         return a < b;
     }
-    void sort(bool(*criteriu)(type, type))
+    void sort(bool(*criteriu)(type, type) = &ascendingsort)
     {
         for(int i = 0; i < n - 1; i ++)
             for(int j = i + 1; j < n; j ++)
@@ -71,5 +69,26 @@ public:
                     array[i] = array[j];
                     array[j] = aux;
                 }
+    }
+    static bool firstIndexOfdefault(type a, type b)
+    {
+        return a == b;
+    }
+    int firstIndexOf(type x, bool(*criteriu)(type, type) = &firstIndexOfdefault)
+    {
+        for(int i = 0; i < n; i ++)
+            if(criteriu(array[i], x))
+                return i + 1;
+        return -1;
+    }
+    type get(int index)
+    {
+        return array[index];
+    }
+    void set(type x, int index)
+    {
+        if(index < 0 || index >= capacity)
+            return;
+        array[index] = x;
     }
 };
