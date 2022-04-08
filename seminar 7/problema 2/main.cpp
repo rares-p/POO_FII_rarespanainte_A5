@@ -4,12 +4,15 @@ using namespace std;
 
 int main()
 {
-    vector<int> calin;
-    calin.push(2);
-    calin.push(6);
-    calin.insert(7,calin.count());
-    calin.insert(3, 3);
-    cout<<calin.pop()<<'\n';
-    calin.sort(calin.ascendingsort);
-    calin.print();
+    vector<int> unvector;
+    unvector.push(2);
+    unvector.push(6);
+    unvector.insert(7,unvector.count());
+    unvector.insert(3, 3);
+    unvector.push(8);
+    unvector.push(1);
+    unvector.push(8);
+    cout << "Vectorul: ";
+    unvector.print();
+    cout << "Prima aparitie a lui 8: " << unvector.firstIndexOf(8);
 }
