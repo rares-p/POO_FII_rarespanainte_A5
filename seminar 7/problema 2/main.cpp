@@ -14,5 +14,8 @@ int main()
     unvector.push(8);
     cout << "Vectorul: ";
     unvector.print();
-    cout << "Prima aparitie a lui 8: " << unvector.firstIndexOf(8);
+    cout << "Prima aparitie a lui 8: " << unvector.firstIndexOf(8) << '\n';
+    cout << "Vectorul sortat (default crescator): ";
+    unvector.sort();
+    unvector.print();
 }
