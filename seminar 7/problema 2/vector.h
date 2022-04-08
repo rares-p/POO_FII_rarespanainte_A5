@@ -8,6 +8,10 @@ public:
     {
         array = new type[capacity];
     }
+    ~vector()
+    {
+        delete array;
+    }
     void push(type x)
     {
         n++;
