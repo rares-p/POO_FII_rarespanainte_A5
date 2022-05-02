@@ -18,7 +18,7 @@ struct Comparare
             int minimul = min(a.first.size(), b.first.size());
             for(int i = 0; i < minimul; i ++)
                 if(a.first[i] != b.first[i])
-                    return a.first[i] < b.first[i];
+                    return a.first[i] > b.first[i];
             return a.first.size() < b.first.size();
         }
         return a.second < b.second;
@@ -43,5 +43,5 @@ int main()
     for(auto i = words.begin(); i != words.end(); i ++)
         wordsSorted.push({i->first, i->second});
     while(!wordsSorted.empty())
-        cout << wordsSorted.top().first << ' ' << wordsSorted.top().second << '\n', wordsSorted.pop();
+        cout << wordsSorted.top().first << " => " << wordsSorted.top().second << '\n', wordsSorted.pop();
 }
